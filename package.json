@@ -1,0 +1,24 @@
+
+{
+  "name": "hubot-http-post-say",
+  "version": "1.0.0",
+  "description": "Unofficial node package of this script: https://github.com/github/hubot-scripts/blob/master/src/scripts/http-post-say.coffee.",
+  "main": "index.coffee",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Drunkar/hubot-http-post-say"
+  },
+  "keywords": [
+    "hubot"
+  ],
+  "author": "Drunkar",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "bugs": {
+    "url": "https://github.com/Drunkar/hubot-http-post-say/issues"
+  },
+  "homepage": "https://github.com/Drunkar/hubot-http-post-say"
+}
