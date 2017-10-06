@@ -21,9 +21,9 @@
 
 module.exports = (robot) ->
   robot.router.post "/hubot/say", (req, res) ->
-    body = req.body.split(",")[0]
-    room = body[0]
-    message = body.slice(1).join("")
+    msg = req.body.msg.split(",")[0]
+    room = msg[0]
+    message = msg.slice(1).join("")
 
     robot.logger.info "Message '#{message}' received for room #{room}"
 
