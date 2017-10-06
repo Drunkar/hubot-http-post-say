@@ -12,28 +12,25 @@
 #
 # URLs:
 #   POST /hubot/say
-#     message = <message>
-#     room = <room>
-#     type = <type>
+#     msg = <room>,<message>
 #
-#   curl -X POST http://localhost:8080/hubot/say -d message=lala -d room='#dev'
+#   curl -X POST http://localhost:8080/hubot/say -d msg=#dev,lala
 #
 # Author:
-#   insom
-#   luxflux
+#   Drunkar
 
 module.exports = (robot) ->
   robot.router.post "/hubot/say", (req, res) ->
-    body = req.body
-    room = body.room
-    message = body.message
+    body = req.body.split(",")[0]
+    room = body[0]
+    message = body.slice(1).join("")
 
     robot.logger.info "Message '#{message}' received for room #{room}"
 
     envelope = robot.brain.userForId 'broadcast'
     envelope.user = {}
     envelope.user.room = envelope.room = room if room
-    envelope.user.type = body.type or 'groupchat'
+    envelope.user.type = 'groupchat'
 
     if message
       robot.send envelope, message
