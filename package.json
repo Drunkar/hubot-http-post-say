@@ -1,7 +1,7 @@
 
 {
   "name": "hubot-http-post-say",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Unofficial node package of this script: https://github.com/github/hubot-scripts/blob/master/src/scripts/http-post-say.coffee.",
   "main": "index.coffee",
   "repository": {
